@@ -45,3 +45,7 @@ Just clone or download this repo and open `index.html` in your browser:
 ## License
 This project is open source and free to use under the MIT License.
 
+## 👨‍💻 Author
+
+Made with 💡 and 🎨 by [Ayan Maity](https://github.com/Ayan-Maity3105)
+
