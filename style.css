@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.header {
+    margin-top: 50px;
+    width: 35%;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 20px 0px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 30px #7b9fed;
+    color: #2c81e6;
+}
+
+.header h1 {
+    font-size: clamp(1rem , 4vw , 2rem);
+}
+
+.box-container {
+    height: auto;
+    width: auto;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.box-container .box-color {
+    height: clamp(150px, 15vh, 450px);  /* Preferred: 30% of viewport height */
+    width: clamp(150px, 15vw, 450px);   /* Preferred: 30% of viewport width */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.box-container .box-color .show-color {
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.box-color::after {
+    content: var(--after-text, "Click to copy");
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: max-content;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.box-color:hover::after {
+    opacity: 1;
+}
+
+.generate-btn {
+    font-size: clamp(1rem , 4vw , 2rem);
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    padding: 15px;
+    background-color: #55103a;;
+    color: white;
+    box-shadow: 2px 2px 20px #55103a;
+}
